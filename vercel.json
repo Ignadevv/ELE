@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/approve", "destination": "/api/approve.js" }
+  ]
+}

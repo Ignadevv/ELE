@@ -1,0 +1,8 @@
+{
+  "name": "peru-elegante-rp-api",
+  "version": "1.0.0",
+  "main": "api/approve.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0"
+  }
+}

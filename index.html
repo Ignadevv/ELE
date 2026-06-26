@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peru Elegante RP | Servidor de FiveM Premium</title>
+    <meta name="description"
+        content="Únete a Peru Elegante RP, el servidor definitivo de GTA V RP en FiveM. Mapeados premium, coches importados, economía real y rol serio peruano.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css?v=1.0.3">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="Peru Elegante RP Logo" class="logo-img">
+                <span>Peru Elegante<span class="text-neon-red"> RP</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#caracteristicas" class="nav-link">Características</a></li>
+                <li><a href="#reglas" class="nav-link">Normativa</a></li>
+                <li><a href="#tienda" class="nav-link">Tienda VIP</a></li>
+                <li><a href="#postulaciones" class="nav-link">Postulaciones</a></li>
+                <li><a href="#discord" class="nav-link">Comunidad</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <a href="https://cfx.re/join/perueleganterp" class="nav-cta" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 3h6v6"></path>
+                    <path d="M10 14 21 3"></path>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+                Conectar
+            </a>
+        </div>
+    </header>
+
+    <!-- Ambient glows -->
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="server-status-pill">
+                        <span class="status-dot"></span>
+                        Servidor Online
+                    </div>
+                    <h1>El Siguiente Nivel de <span class="text-gradient">Roleplay Serio</span></h1>
+                    <p>Peru Elegante RP te ofrece una experiencia de rol única con optimización al 100%, scripts
+                        exclusivos, facciones dinámicas, policía nacional, y sistemas ilegales elaborados. Prepárate
+                        para escribir tu propia historia.</p>
+
+                    <div class="hero-buttons">
+                        <a href="https://cfx.re/join/perueleganterp" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Jugar Ahora
+                        </a>
+                        <a href="#reglas" class="btn btn-secondary">Leer Normas</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 id="players-count">--/128</h3>
+                            <p>Jugadores Activos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>60 FPS</h3>
+                            <p>Optimización GT</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>+1,500</h3>
+                            <p>Miembros</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card-wrapper">
+                    <div class="hero-card glass-card">
+                        <div class="server-logo-large">
+                            <img src="logo.jpg" alt="Peru Elegante RP Logo" class="server-logo-img">
+                        </div>
+                        <h2>Peru Elegante RP</h2>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Servidor Hispano de
+                            FiveM</p>
+
+                        <div class="server-ip">
+                            <span id="server-ip-text">connect.perueleganterp.com</span>
+                            <button id="copy-ip-btn" class="copy-btn" title="Copiar dirección IP">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <a href="https://discord.gg/perueleganterp" class="btn btn-secondary"
+                            style="width: 100%; justify-content: center; gap: 8px;" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg width="18" height="18" viewBox="0 0 127.14 96.36" fill="currentColor"
+                                style="display:inline-block; vertical-align:middle;">
+                                <path
+                                    d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2.07a75.14,75.14,0,0,0,72.62,0c.83.73,1.69,1.42,2.58,2.07a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.6-18.83C129.25,48.24,122.9,25.43,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z" />
+                            </svg>
+                            Unirse al Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="caracteristicas" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="section-subtitle">¿Por qué elegirnos?</span>
+                <h2 class="section-title">Características Exclusivas</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Mapeados Propios</h3>
+                        <p>Contamos con interiores y localizaciones exclusivas inspiradas y adaptadas, optimizadas al
+                            detalle para garantizar una inmersión completa sin tirones.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Scripts Únicos</h3>
+                        <p>Sistemas de inventario avanzados, interfaz minimalista y moderna, y trabajos
+                            peruanos/clásicos legales e ilegales que no verás en otro sitio.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Anti-Cheat & Rol Serio</h3>
+                        <p>Filtros estrictos de whitelist rápida y un sistema de seguridad avanzado para asegurar una
+                            experiencia libre de hackers y anti-rol.</p>
+                    </div>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                            </svg>
+                        </div>
+                        <h3>Economía Balanceada</h3>
+                        <p>Precios realistas ajustados tanto para la vida cotidiana de un ciudadano como para la
+                            adquisición de propiedades y vehículos exclusivos.</p>
+                    </div>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v4l3 3"></path>
+                            </svg>
+                        </div>
+                        <h3>Soporte 24/7</h3>
+                        <p>Un equipo de staff dedicado y disponible a cualquier hora a través de ticket en nuestro
+                            Discord oficial para solucionar tus dudas.</p>
+                    </div>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-card-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Coches Importados</h3>
+                        <p>Catálogo extenso de vehículos reales, perfectamente configurados en físicas y velocidad para
+                            una conducción increíble.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="reglas">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Lo básico para jugar</span>
+                <h2 class="section-title">Normativa del Servidor</h2>
+            </div>
+
+            <div class="rules-container">
+                <div class="rule-item">
+                    <button class="rule-header">
+                        1. Conceptos Básicos de Rol (IC / OOC)
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Es indispensable diferenciar en todo momento las acciones de tu personaje de tus
+                                pensamientos fuera del juego:</p>
+                            <ul>
+                                <li><strong>In Character (IC):</strong> Todo lo que ocurre, se dice y se realiza en el
+                                    juego a través de tu personaje.</li>
+                                <li><strong>Out Of Character (OOC):</strong> Todo lo relacionado con el mundo real,
+                                    fuera de la vida del personaje.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item">
+                    <button class="rule-header">
+                        2. Acciones Prohibidas (Metagaming, Powergaming)
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Buscamos fomentar un entorno realista, por lo que estas acciones conllevan sanciones
+                                directas:</p>
+                            <ul>
+                                <li><strong>Metagaming (MG):</strong> Utilizar cualquier información obtenida fuera del
+                                    juego (como streams o chats de Discord) para beneficio IC.</li>
+                                <li><strong>Powergaming (PG):</strong> Realizar acciones que serían físicamente
+                                    imposibles en la vida real, o forzar el rol de otros jugadores sin darles opción de
+                                    respuesta.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item">
+                    <button class="rule-header">
+                        3. Valorar la Vida (VDV)
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Debes actuar con tu personaje de la misma manera que lo harías en la vida real ante una
+                                situación de peligro inminente. Si te encañonan, debes cooperar. Tu vida y tu integridad
+                                física son la prioridad absoluta de tu personaje en todo momento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item">
+                    <button class="rule-header">
+                        4. Zonas Seguras y Rol Agresivo
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Las zonas seguras son áreas libres de hostilidad y delitos (ej. Hospitales, Comisarías,
+                                Concesionario Principal). Adicionalmente, cualquier rol agresivo (secuestro, robo)
+                                requiere un motivo IC de peso y nunca debe iniciarse de forma injustificada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="tienda" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Apoya al servidor</span>
+                <h2 class="section-title">Rangos VIP & Tienda</h2>
+            </div>
+
+            <div class="store-grid">
+                <!-- Rango VIP Bronce -->
+                <div class="store-card glass-card">
+                    <div class="vip-icon">
+                        <svg viewBox="0 0 24 24">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                    </div>
+                    <h3>VIP Bronce</h3>
+                    <div class="vip-price">5.00€<span>/mes</span></div>
+                    <ul class="vip-features">
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Prioridad de cola baja
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Garaje VIP de 5 vehículos
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Rol exclusivo en Discord
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            +50,000$ Dinero IC (Único pago)
+                        </li>
+                    </ul>
+                    <a href="https://tienda.perueleganterp.com" class="btn btn-secondary btn-store" target="_blank"
+                        rel="noopener noreferrer">Adquirir</a>
+                </div>
+
+                <!-- Rango VIP Oro (Destacado) -->
+                <div class="store-card glass-card featured">
+                    <div class="badge">Más Popular</div>
+                    <div class="vip-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>VIP Oro</h3>
+                    <div class="vip-price">15.00€<span>/mes</span></div>
+                    <ul class="vip-features">
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Prioridad de cola alta (Salto inmediato)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Garaje VIP ilimitado
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Acceso a 3 vehículos importados
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Creación de 2º personaje
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            +200,000$ Dinero IC (Único pago)
+                        </li>
+                    </ul>
+                    <a href="https://tienda.perueleganterp.com" class="btn btn-primary btn-store" target="_blank"
+                        rel="noopener noreferrer">Adquirir</a>
+                </div>
+
+                <!-- Rango VIP Platino -->
+                <div class="store-card glass-card">
+                    <div class="vip-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>VIP Platino</h3>
+                    <div class="vip-price">25.00€<span>/mes</span></div>
+                    <ul class="vip-features">
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Prioridad de cola máxima (Inmune a colas)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Garaje VIP ilimitado + Mansión custom
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Acceso a todos los coches importados
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Creación de facción ilegal gratis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            +500,000$ Dinero IC (Único pago)
+                        </li>
+                    </ul>
+                    <a href="https://tienda.perueleganterp.com" class="btn btn-secondary btn-store" target="_blank"
+                        rel="noopener noreferrer">Adquirir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factions Application Section -->
+    <section id="postulaciones">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Únete a nuestras fuerzas</span>
+                <h2 class="section-title">Postulación de Facciones</h2>
+            </div>
+
+            <div class="apply-container glass-card">
+                <!-- Faction Selection Step -->
+                <div id="step-selection" class="apply-step active">
+                    <h3>Postulación de Facciones</h3>
+                    <p class="step-desc">Antes de iniciar tu postulación, es obligatorio vincular tu cuenta de Discord para registrar tu identidad y notificarte si eres aprobado.</p>
+                    
+                    <!-- Discord Linking UI -->
+                    <div id="discord-link-container" class="discord-link-box">
+                        <button id="btn-discord-login" class="btn btn-primary btn-discord-login-large" onclick="loginWithDiscord()">
+                            <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" style="vertical-align:middle; margin-right:8px;">
+                                <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2.07a75.14,75.14,0,0,0,72.62,0c.83.73,1.69,1.42,2.58,2.07a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.6-18.83C129.25,48.24,122.9,25.43,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/>
+                            </svg>
+                            Vincular mi Discord
+                        </button>
+                        <div id="discord-profile-display" style="display: none;">
+                            <div class="discord-avatar-wrapper">
+                                <img id="discord-avatar" src="" alt="Avatar">
+                                <div class="discord-status-indicator"></div>
+                            </div>
+                            <div class="discord-meta">
+                                <span id="discord-username">Usuario#0000</span>
+                                <span class="linked-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Vinculado
+                                </span>
+                            </div>
+                            <button class="btn btn-secondary btn-discord-logout" onclick="logoutDiscord()">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle; margin-right:4px;">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                Desvincular
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 id="select-faction-title" class="selector-title">Selecciona tu Facción</h3>
+                    <div class="faction-selector-wrapper">
+                        <div class="faction-selector-grid disabled" id="faction-selector-grid">
+                            <div class="faction-card pnp-card" onclick="selectFaction('PNP')">
+                                <div class="faction-card-inner">
+                                    <div class="faction-icon pnp-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#pnp-gradient)"/>
+                                            <path d="M12 6v11M9 9h6M9 13h6" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+                                            <defs>
+                                                <linearGradient id="pnp-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#1e3c72" />
+                                                    <stop offset="100%" stop-color="#2a5298" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <h4>PNP</h4>
+                                    <p>Policía Nacional del Perú</p>
+                                </div>
+                            </div>
+                            <div class="faction-card ems-card" onclick="selectFaction('EMS')">
+                                <div class="faction-card-inner">
+                                    <div class="faction-icon ems-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" stroke="url(#ems-gradient)" stroke-width="3" stroke-linecap="round"/>
+                                            <circle cx="12" cy="12" r="4" fill="#e62e43" stroke="#fff" stroke-width="1.5"/>
+                                            <path d="M12 10v4M10 12h4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                                            <defs>
+                                                <linearGradient id="ems-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#ff416c" />
+                                                    <stop offset="100%" stop-color="#ff4b2b" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <h4>EMS</h4>
+                                    <p>Servicio de Emergencias Médicas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="faction-lock-overlay" class="lock-overlay">
+                            <div class="lock-content">
+                                <div class="lock-icon-wrapper">
+                                    <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                </div>
+                                <p>Vincula tu Discord para desbloquear las postulaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Step (Dynamic Quiz) -->
+                <div id="step-form" class="apply-step">
+                    <div class="form-header">
+                        <span id="faction-title">Postulación PNP</span>
+                        <div class="progress-bar-container">
+                            <div id="form-progress" class="progress-bar-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <h4 id="question-label">Pregunta 1</h4>
+                        <p id="question-text">¿Cuál es tu nombre de personaje (IC) y tu edad?</p>
+
+                        <textarea id="answer-input"
+                            placeholder="Escribe tu respuesta aquí detalladamente..."></textarea>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button class="btn btn-secondary" onclick="prevQuestion()" id="btn-back">Atrás</button>
+                        <button class="btn btn-primary" onclick="nextQuestion()" id="btn-next">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Success Step -->
+                <div id="step-success" class="apply-step">
+                    <div class="success-icon">✔️</div>
+                    <h3>¡Postulación Enviada con Éxito!</h3>
+                    <p class="success-desc">Tus respuestas y tiempos de demora han sido registrados correctamente en
+                        Firebase y enviados a los reclutadores en Discord. Evaluaremos tu perfil pronto y te avisaremos
+                        por Discord.</p>
+                    <button class="btn btn-primary" onclick="resetForm()">Volver al Inicio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Widget Section -->
+    <section id="discord">
+        <div class="container reveal">
+            <div class="discord-card glass-card">
+                <div class="discord-content">
+                    <h2>Únete a Nuestra Gran Comunidad</h2>
+                    <p>Encuentra amigos con tus mismos gustos, entérate de las últimas actualizaciones del servidor,
+                        asiste a eventos exclusivos de la comunidad y resuelve tus dudas al instante en Discord.</p>
+                    <a href="https://discord.gg/perueleganterp" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor"
+                            style="display:inline-block; vertical-align:middle; margin-right:8px;">
+                            <path
+                                d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2.07a75.14,75.14,0,0,0,72.62,0c.83.73,1.69,1.42,2.58,2.07a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.6-18.83C129.25,48.24,122.9,25.43,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z" />
+                        </svg>
+                        Unirse a Discord
+                    </a>
+                </div>
+
+                <div class="discord-widget-placeholder">
+                    <div class="discord-header-mini">
+                        <div class="discord-logo-mini">
+                            <svg viewBox="0 0 127.14 96.36">
+                                <path
+                                    d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2.07a75.14,75.14,0,0,0,72.62,0c.83.73,1.69,1.42,2.58,2.07a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.6-18.83C129.25,48.24,122.9,25.43,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z" />
+                            </svg>
+                        </div>
+                        <div class="discord-title-mini">
+                            <h4>Peru Elegante RP</h4>
+                            <span>Comunidad de FiveM</span>
+                        </div>
+                    </div>
+                    <div class="discord-members-count">
+                        <div>
+                            <span class="dot-green"></span>
+                            342 Conectados
+                        </div>
+                        <div>
+                            <span class="dot-gray"></span>
+                            1,529 Totales
+                        </div>
+                    </div>
+                    <a href="https://discord.gg/perueleganterp" class="btn-discord-join" target="_blank"
+                        rel="noopener noreferrer">Entrar al Servidor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="section-subtitle">Tus dudas resueltas</span>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="rule-item">
+                    <button class="rule-header">
+                        ¿Cómo puedo unirme al servidor por primera vez?
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Es muy sencillo. Solo necesitas tener GTA V original instalado en tu PC, descargar el
+                                cliente oficial de FiveM, abrirlo y presionar el botón de "Jugar Ahora" en nuestra web,
+                                o usar el comando de consola `F8` e introducir `connect connect.perueleganterp.com`.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item">
+                    <button class="rule-header">
+                        ¿El servidor requiere Whitelist previa?
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Actualmente el servidor opera bajo acceso libre para la zona de bienvenida, pero debes
+                                realizar una entrevista teórica rápida con nuestro staff en Discord para activar tu
+                                personaje principal y acceder a todos los trabajos y facciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item">
+                    <button class="rule-header">
+                        ¿Qué puedo hacer si tengo un problema o reporte dentro del juego?
+                        <div class="rule-icon">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="rule-content">
+                        <div class="rule-content-inner">
+                            <p>Puedes reportarlo en directo dentro del juego utilizando el comando `/report
+                                [Descripción]` para que un moderador online te asista. Si necesitas adjuntar pruebas
+                                visuales o de vídeo, puedes abrir un ticket de soporte en nuestro servidor de Discord.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#" class="logo" style="margin-bottom: 20px;">
+                        <img src="logo.jpg" alt="Peru Elegante RP Logo" class="logo-img">
+                        <span>Peru Elegante<span class="text-neon-red"> RP</span></span>
+                    </a>
+                    <p>La experiencia definitiva de rol en español con ambiente peruano y de la mejor calidad. Descubre
+                        un servidor hecho por jugadores para jugadores.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#reglas">Normativa</a></li>
+                        <li><a href="#tienda">Tienda VIP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Servicio</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/perueleganterp" target="_blank"
+                                rel="noopener noreferrer">Soporte Discord</a></li>
+                        <li><a href="https://tienda.perueleganterp.com" target="_blank"
+                                rel="noopener noreferrer">Términos del VIP</a></li>
+                        <li><a href="https://cfx.re/join/perueleganterp" target="_blank"
+                                rel="noopener noreferrer">Conectar directo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos del Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Reembolsos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Peru Elegante RP. Todos los derechos reservados. No estamos afiliados con Rockstar Games
+                    ni Take-Two Interactive.</p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/perueleganterp" class="social-icon" target="_blank"
+                        rel="noopener noreferrer" aria-label="Discord">
+                        <svg viewBox="0 0 127.14 96.36">
+                            <path
+                                d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.9-.65,1.76-1.34,2.58-2.07a75.14,75.14,0,0,0,72.62,0c.83.73,1.69,1.42,2.58,2.07a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.6-18.83C129.25,48.24,122.9,25.43,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z" />
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com" class="social-icon" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                            </path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase Compatibility SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- JS script -->
+    <script src="app.js?v=1.0.3"></script>
+</body>
+
+</html>
